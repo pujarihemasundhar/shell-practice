@@ -1,7 +1,7 @@
 #!/bin/bash
 
-person1=modi  #there should  be no space between =
-person2=putin
+person1=$1  #there should  be no space between =
+person2=$2
 
 echo "$person1: Hi $person2, how are you?"
 echo "$person2: Hi $person1, Fine, Hope you are doing well"
