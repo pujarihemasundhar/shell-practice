@@ -10,7 +10,7 @@ else
     echo "running the script with root user"
 fi
 
-dnf install mysql -y
+
 
 VALIDATE(){
 
@@ -23,7 +23,7 @@ VALIDATE(){
     fi
 }
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "Mysql is not installed...going to install"
     dnf install mysql -y
