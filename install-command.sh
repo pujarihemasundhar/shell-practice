@@ -21,5 +21,8 @@ then
         echo "Installing MySQL is .......SUCCESS"
     else
         echo "Installing MySQL is ........FAILURE"
+        exit 1
+    fi
 else
     echo "MySQL is already installed.NOTHING TO DO"
+fi
