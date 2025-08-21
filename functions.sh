@@ -43,7 +43,7 @@ then
     dnf install python3 -y
     VALIDATE $? "python3"
 else
-    echo "Mysql is already installed...Nothing to DOOO"
+    echo "python3 is already installed...Nothing to DOOO"
 fi
 
 
@@ -57,5 +57,5 @@ then
     dnf install nginx -y
     VALIDATE $? "nginx"
 else
-    echo "Mysql is already installed...Nothing to DOOO"
+    echo "nginx is already installed...Nothing to DOOO"
 fi
