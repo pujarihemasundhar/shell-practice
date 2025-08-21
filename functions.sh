@@ -23,6 +23,8 @@ VALIDATE(){
     fi
 }
 
+
+dnf list installed mysql
 if [ $? -ne 0 ]
 then
     echo "Mysql is not installed...going to install"
@@ -34,7 +36,7 @@ fi
 
 
 
-
+dnf list installed python3
 if [ $? -ne 0 ]
 then
     echo "Mysql is not installed...going to install"
@@ -48,7 +50,7 @@ fi
 
 
 
-
+dnf list installed nginx
 if [ $? -ne 0 ]
 then
     echo "Mysql is not installed...going to install"
