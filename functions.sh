@@ -31,3 +31,29 @@ then
 else
     echo "Mysql is already installed...Nothing to DOOO"
 fi
+
+
+
+
+if [ $? -ne 0 ]
+then
+    echo "Mysql is not installed...going to install"
+    dnf install python3 -y
+    VALIDATE $? "python3"
+else
+    echo "Mysql is already installed...Nothing to DOOO"
+fi
+
+
+
+
+
+
+if [ $? -ne 0 ]
+then
+    echo "Mysql is not installed...going to install"
+    dnf install nginx -y
+    VALIDATE $? "nginx"
+else
+    echo "Mysql is already installed...Nothing to DOOO"
+fi
