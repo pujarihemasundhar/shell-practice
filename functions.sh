@@ -12,10 +12,8 @@ fi
 
 dnf install mysql -y
 
-if [ $? -ne 0]
-then
-    echo "Mysql is not installed...going to install"
-    dnf install mysql -y
+VALIDATE(){
+
     if [ $? -eq 0]
     then
         echo "MySQl is installing is....SUCCESS"
@@ -23,6 +21,13 @@ then
         echo "MySQL installing is .....FAILURE"
         exit 1
     fi
+}
+
+if [ $? -ne 0]
+then
+    echo "Mysql is not installed...going to install"
+    dnf install mysql -y
+    VALIDATE $1 "MySQL"
 else
     echo "Mysql is already installed...Nothing to DOOO"
 fi
