@@ -25,3 +25,4 @@ then
     fi
 else
     echo "Mysql is already installed...Nothing to DOOO"
+fi
