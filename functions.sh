@@ -8,5 +8,6 @@ then
     exit 1
 else 
     echo "running the script with root user"
+fi
 
 dnf install mysql -y
