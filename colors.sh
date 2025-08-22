@@ -6,10 +6,10 @@
 
 userid=$(id -u)
 
-#R="\e[31m"
-#G="\e[32m"
-#Y="\e[33m"
-#N="\e[0m"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
 
 if [ $userid -ne 0 ]
@@ -24,9 +24,9 @@ VALIDATE(){
 
     if [ $1 -eq 0 ]
     then
-        echo "Installing $2 is..........SUCCCESS"
+        echo "Installing $2 is..........$G SUCCCESS $N"
     else
-        echo "Installing $2 is...........FAILURE"
+        echo "Installing $2 is...........$R FAILURE $N"
         exit 1
     fi
 }
@@ -38,5 +38,5 @@ then
     dnf install mysql -y
     VALIDATE $? "MySQL"
 else
-    echo "MySQL is already installed..... NOTHING TO DO"
+    echo "$Y MySQL is already installed..... NOTHING TO DO"
 fi
