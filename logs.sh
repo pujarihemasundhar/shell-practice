@@ -9,6 +9,7 @@ userid=$(id -u)
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
+M="\e[35m"
 N="\e[0m"
 
 LOGS_FOLDER="/var/log/shellscript-logs"
@@ -41,7 +42,7 @@ VALIDATE(){
 dnf list installed mysql &>>$LOG_FILE
 if [ $? -ne 0 ]
 then 
-    echo "MySQL is not installed.....Going to install" | tee -a $LOG_FILE
+    echo -e "$M MySQL is not installed.....Going to install $N" | tee -a $LOG_FILE
     dnf install mysql -y &>>$LOG_FILE
     VALIDATE $? "MySQL"
 else
@@ -51,7 +52,7 @@ fi
 dnf  list installed python3 &>>$LOG_FILE
 if [ $? -ne 0 ]
 then 
-    echo  "Python is not installed ...GOING to install" | tee -a $LOG_FILE
+    echo -e "$M Python is not installed ...GOING to install $N" | tee -a $LOG_FILE
     dnf install python3 -y &>>$LOG_FILE
     VALIDATE $? "PYTHON3"
 else
@@ -61,7 +62,7 @@ fi
 dnf list installed nginx &>>$LOG_FILE
 if [ $? -ne 0 ]
 then 
-    echo "NGINX is not installed....GOING to install" | tee -a $LOG_FILE
+    echo -e "$M NGINX is not installed....GOING to install $N" | tee -a $LOG_FILE
     dnf install nginx -y &>>$LOG_FILE
     VALIDATE $? "NGINX"
 else
