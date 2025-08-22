@@ -23,6 +23,7 @@ fi
 VALIDATE(){
 
     if [ $1 -eq 0 ]
+    then
         echo "Installing $2 is..........SUCCCESS"
     else
         echo "Installing $2 is...........FAILURE"
