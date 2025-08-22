@@ -50,3 +50,13 @@ then
 else
     echo -e "$Y Python3 is already installed.......NOTHING TO DO"
 fi
+
+dnf list installed nginx
+if [ $? -ne 0 ]
+then 
+    echo "NGINX is not installed....GOING to install"
+    dnf install nginx -y
+    VALIDATE $? "NGINX"
+else
+    echo -e "$Y NGINx is already installed...NOTHING TO DO"
+
