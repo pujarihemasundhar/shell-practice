@@ -24,9 +24,9 @@ VALIDATE(){
 
     if [ $1 -eq 0 ]
     then
-        echo "Installing $2 is..........$G SUCCCESS $N"
+        echo -e "Installing $2 is..........$G SUCCCESS $N"
     else
-        echo "Installing $2 is...........$R FAILURE $N"
+        echo -e "Installing $2 is...........$R FAILURE $N"
         exit 1
     fi
 }
