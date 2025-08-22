@@ -12,7 +12,7 @@ Y="\e[33m"
 N="\e[0m"
 
 
-if [ $userid ne 0 ]
+if [ $userid -ne 0 ]
 then
     echo -e " $R ERROR:: Please run the script with root user"
 else
