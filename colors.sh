@@ -17,3 +17,4 @@ then
     echo -e " $R ERROR:: Please run the script with root user"
 else
     echo "You are running with root user"
+fi
