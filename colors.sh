@@ -40,3 +40,13 @@ then
 else
     echo -e "$Y MySQL is already installed..... NOTHING TO DO"
 fi
+
+dnf  list installed python3
+if [ $? -ne 0 ]
+then 
+    echo  "Python is not installed ...GOING to install"
+    dnf install python3 -y
+    VALIDATE $? "PYTHON3"
+else
+    echo -e "$Y Python3 is already installed.......NOTHING TO DO"
+fi
